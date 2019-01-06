@@ -18,27 +18,29 @@ Login screen should be presentend
     Capture Page Screenshot               filename=initial-screen-validation.png
 
 the credential fields are filled
-    [Arguments]                           ${username}                               ${password}
-    appium.Input Text                     id=txt_username                           ${username}
-    appium.Input Password                 id=txt_password                           ${password}
+    [Arguments]                           ${username}                                ${password}
+    appium.Input Text                     id=txt_username                            ${username}
+    appium.Input Password                 id=txt_password                            ${password}
 
 login is performed
     appium.Hide Keyboard
-    appium.Click Element                  id=btn_login
-    #get source ou log source ver melhor
-    # ${source}                             appium.Get Source
-    # std.Log                               ${source}
+    appium.Tap                            id=btn_login
 
 the text on the screen should be displayed
     [Arguments]                           ${screen_text}
-    appium.Wait Activity                  .MainActivity                             timeout=5
+    appium.Wait Activity                  .MainActivity                              timeout=5
     appium.Page Should Contain Text       ${screen_text}
+    Capture Page Screenshot               filename=helloworld-text-validation.png
 
 I fill only the password field
     [Arguments]                           ${password}
-    appium.Input Password                 id=txt_password                           ${password}
+    appium.Input Password                 id=txt_password                            ${password}
 
 the alert on the screen should be displayed
     [Arguments]                           ${fail_alert}
-    # appium.Wait Until Page Contains       xpath=//android.widget.Toast[0]
     appium.Wait Until Page Contains       ${fail_alert}
+    Capture Page Screenshot               filename=fail-alert-validation.png
+
+I fill only the username field
+    [Arguments]                           ${username}
+    appium.Input Text                     id=txt_username                            ${username}

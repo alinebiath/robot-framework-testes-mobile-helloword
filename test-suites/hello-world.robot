@@ -1,6 +1,8 @@
 *** Settings ***
 
 Documentation     "Hello Word" Tests Suite to validate the app screens.
+...               For the test cases it will be assumed that the requirements require,
+...               the initialization and finalization in the execution of each one.
 
 Resource          ${CURDIR}/../keywords/hello-world.robot
 
@@ -23,14 +25,14 @@ Scenario: Login with all fields filled out
     And login is performed
     Then the text on the screen should be displayed     Hello World!
 
-
 Scenario: Login with empty username field
     [Tags]                                              username
-    When I fill only the password field                 1234
+    When I fill only the password field                 abcde
     And login is performed
     Then the alert on the screen should be displayed    Login Failed!
 
-# Scenario: Login with empty password field
-#                 When fill in the username field                          usertest
-#                 And let the password field empty
-#                 Then app should display a toast read                     Login Failed!
+Scenario: Login with empty password field
+    [Tags]                                              password
+    When I fill only the username field                 userone
+    And login is performed
+    Then the alert on the screen should be displayed    Login Failed!
