@@ -1,0 +1,8 @@
+-v fullReset:false
+-v noReset:false
+-v waitAction:350
+-v printPageSourceOnFindFailure:true
+--name 'Hello Word Tests Suite'
+-d output/hello_word
+#--removekeywords name:common.BootstrapTestEnvironment
+#--removekeywords name:common.ShutdownTestEnvironment
