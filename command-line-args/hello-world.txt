@@ -3,6 +3,6 @@
 -v waitAction:350
 -v printPageSourceOnFindFailure:true
 --name 'Hello Word Tests Suite'
--d output/hello_word
+-d output/hello_world
 #--removekeywords name:common.BootstrapTestEnvironment
 #--removekeywords name:common.ShutdownTestEnvironment
