@@ -1,21 +1,9 @@
-
-package.json
-package-lock.json
-
 .vscode/
 
 node_modules/
 
 output/
 
-
-variables/authentication-flow.py
-
-test-suites/authentication.robot
-test-suites/developer-tests.robot
-
-
-keywords/authentication.robot
 
 variables/__pycache__
 

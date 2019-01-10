@@ -1,0 +1,14 @@
+{
+  "name": "robot-project-mobile-app",
+  "version": "1.0.0",
+  "description": "Teste de automacao mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aline.biath",
+  "license": "ISC",
+  "dependencies": {
+    "appium": "^1.10.0"
+  }
+}
