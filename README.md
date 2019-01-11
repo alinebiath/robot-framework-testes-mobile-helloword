@@ -5,7 +5,7 @@ To perform the tests was used the Hello World app, made available by Haejoong Le
 https://github.com/Anexinet/RobotFrameworkDemo-Android
 
 The environment for running tests requires the following steps:
-  Install Python 2.7
+  <p>Install Python 2.7</p>
   Install Robot Framework
   Install JRE
   Install (SDK) Android
