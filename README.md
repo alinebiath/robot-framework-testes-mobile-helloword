@@ -1,5 +1,6 @@
 # robot-project-mobile-app
 
+Small demonstration of a project to automate Android application tests with Robot Framework.
 To perform the tests was used the Hello World app, made available by Haejoong Lee in its repository:
 https://github.com/Anexinet/RobotFrameworkDemo-Android
 
