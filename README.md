@@ -1,4 +1,4 @@
-# robot-project-mobile-app
+# Automating Android app tests with Robot Framework.
 
 Small demonstration of a project to automate Android application tests with Robot Framework. The script was developed to test application in physical device and don't perform in emulators. For this, the code must be adapted.<br />
 
