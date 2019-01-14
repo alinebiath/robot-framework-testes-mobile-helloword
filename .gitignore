@@ -1,13 +1,11 @@
 .vscode/
 
+apks/
+
 node_modules/
 
 output/
 
-
 variables/__pycache__
 
-
 variables/initial-screen.pyc
-
-apks/
