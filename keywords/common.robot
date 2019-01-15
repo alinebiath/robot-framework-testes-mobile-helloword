@@ -1,6 +1,7 @@
 *** Settings ***
 
 Resource    ${CURDIR}/libraries.robot
+Resource    ${CURDIR}/../variables/appium-capabilities.robot
 
 *** Keywords ***
 
