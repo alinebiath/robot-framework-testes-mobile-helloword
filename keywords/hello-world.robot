@@ -1,7 +1,6 @@
 *** Settings ***
 
 Resource     ${CURDIR}/libraries.robot
-Resource     ${CURDIR}/../variables/variables-global.robot
 Resource     ${CURDIR}/../keywords/common.robot
 
 Variables    ../variables/initial-screen.py
