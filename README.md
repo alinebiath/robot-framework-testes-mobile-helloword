@@ -8,8 +8,6 @@ https://github.com/Anexinet/RobotFrameworkDemo-Android
 The environment for running tests requires the following steps:
  <p>Install Python 2.7</p>
  <p>Install Robot Framework</p>
- <p>Install JRE</p>
- <p>Install (SDK) Android</p>
  <p>Install Appium</p>
  <p>Install Robot Framework library - AppiumLibrary </p>
 
