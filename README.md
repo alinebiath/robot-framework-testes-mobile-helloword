@@ -12,15 +12,4 @@
 - Install Appium
 - Use an ASCII editor of your preference (i.e. VSCode, Atom, RIDE, etc)</br>
 
-### Installing required Python libraries
-With the pre-conditions satisfied, the libraries required to run the tests must be installed. At the terminal, execute the command below:
-```sh
-Windows
-$ pip install -r requirements.txt
-```
-```sh
-Linux / Mac
-$ sudo pip install -r requirements.txt
-```
-This command will perform pip installation of what is required by the Robot Framework specified in the <i>requirements.txt file</i>.</br>
 
