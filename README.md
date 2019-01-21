@@ -6,9 +6,8 @@
 
 ### Pre-conditions for the tests
 - Clone the project
-- Install the app in device
-- Install Python 2.7.15
-- Install Appium
-- Use an ASCII editor of your preference (i.e. VSCode, Atom, RIDE, etc)</br>
+- Python 2.7.15 installed
+- NodeJS installed
+- An ASCII editor of your preference (i.e. VSCode, Atom, RIDE, etc)</br>
 
 
