@@ -2,8 +2,7 @@
 
 - Tests applied in an Android application called "Hello World" 
 - App available for free by Haejoong Lee in his repository at: https://github.com/Anexinet/RobotFrameworkDemo-Android
-- The script was developed to test application in physical device and don't perform in emulators. 
-- For this, the code must be adapted.
+- The script was developed to test application in physical device and don't perform in emulators. For this, the code must be adapted.
 
 ### Pre-conditions for the tests
 - Clone the project
