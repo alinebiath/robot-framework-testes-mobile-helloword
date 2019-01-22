@@ -9,6 +9,7 @@
 - Python 2.7.15 installed
 - NodeJS installed
 - SDK or Android Studio installed (see how to install: https://robotizandotestes.blogspot.com/2018/01/season-mobile-com-appium-ep01.html)
+- Plataforms Android 6.0, 7.0 and 7.1.1 installed (see how to install: https://robotizandotestes.blogspot.com/2018/01/season-mobile-com-appium-ep01.html)
 - An ASCII editor of your preference (i.e. VSCode, Atom, RIDE, etc)</br>
 
 ### 2. Installing Appium Server
