@@ -29,3 +29,5 @@ Linux / Mac
 $ sudo pip install -r requirements.txt
 ```
 This command will perform pip installation of what is required by the Robot Framework specified in the <i>requirements.txt file</i>.</br>
+
+### 4. Getting device information
