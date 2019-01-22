@@ -32,3 +32,15 @@ $ sudo pip install -r requirements.txt
 This command will perform pip installation of what is required by the Robot Framework specified in the <i>requirements.txt file</i>.</br>
 
 ### 4. Getting device information
+- First, enable developer mode on your Android device. See how: https://www.techtudo.com.br/dicas-e-tutoriais/noticia/2014/10/como-ativar-o-modo-desenvolvedor-no-android.html
+- In the sequence, connect the device and enable USB debugging in the dialog box that will open on the device
+- Get the device name by executing the command below:
+```sh
+$ adb devices
+```
+- Enter the name returned in the <i>appium-capabilities.robot</i> file, replacing the variable <i>${DEVICE_NAME}</i>.
+- This file contains the Appium desired capabilities, which must be modified according to the configuration need.
+- See more Appium desired capabilities: http://appium.io/docs/en/writing-running-appium/caps/
+
+
+
