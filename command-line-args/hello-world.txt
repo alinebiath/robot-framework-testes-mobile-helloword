@@ -4,5 +4,3 @@
 -v printPageSourceOnFindFailure:true
 --name 'Hello Word Tests Suite'
 -d output/hello_world
-#--removekeywords name:common.BootstrapTestEnvironment
-#--removekeywords name:common.ShutdownTestEnvironment
