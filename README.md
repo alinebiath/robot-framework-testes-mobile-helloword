@@ -46,6 +46,18 @@ $ adb devices
 Execute at the terminal the command below:
 ```sh
 $ robot -A command-line-args/hello-world.txt test-suites/hello-world.robot
-```
+```  
 NOTE: The option <i>-A</i> indicates that an argument file will be read.
+
+### 5. Useful commands
+Sometimes it's necessary to check the test result in more details . Use the option <i>trace</i>:
+```sh
+$ robot -L trace -A command-line-args/hello-world.txt test-suites/hello-world.robot
+```  
+For fast execution of tests (keywords coming from the test libraries are not executed at all):
+```sh
+$ robot --dryrun -A command-line-args/hello-world.txt test-suites/hello-world.robot
+``` 
+
+
 
