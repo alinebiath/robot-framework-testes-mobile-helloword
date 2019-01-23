@@ -42,5 +42,10 @@ $ adb devices
 - This file contains the Appium desired capabilities, which must be modified according to the configuration need.
 - See more Appium desired capabilities: http://appium.io/docs/en/writing-running-appium/caps/
 
-
+### 5. Running Robot Framework tests
+Execute at the terminal the command below:
+```sh
+$ robot -A command-line-args/hello-world.txt test-suites/hello-world.robot
+```
+NOTE: The option <i>-A</i> indicates that a argument file will be read.
 
