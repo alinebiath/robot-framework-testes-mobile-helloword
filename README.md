@@ -47,5 +47,5 @@ Execute at the terminal the command below:
 ```sh
 $ robot -A command-line-args/hello-world.txt test-suites/hello-world.robot
 ```
-NOTE: The option <i>-A</i> indicates that a argument file will be read.
+NOTE: The option <i>-A</i> indicates that an argument file will be read.
 
