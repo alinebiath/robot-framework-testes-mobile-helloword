@@ -49,7 +49,7 @@ $ robot -A command-line-args/hello-world.txt test-suites/hello-world.robot
 ```  
 NOTE: The option <i>-A</i> indicates that an argument file will be read.
 
-### 5. Useful commands
+### 6. Useful commands
 Sometimes it's necessary to check the test result in more details . Use the option <i>trace</i>:
 ```sh
 $ robot -L trace -A command-line-args/hello-world.txt test-suites/hello-world.robot
