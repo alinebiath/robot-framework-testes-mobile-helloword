@@ -5,6 +5,7 @@ Resource                   ${CURDIR}/../variables/appium-capabilities.robot
 
 *** Variables ***
 
+#Variable stores a Unix command that kills a process
 ${KILL_PROCESS_COMMAND}    ps aux | pgrep -f pattern | xargs kill $SIGTERM
 
 *** Keywords ***
@@ -45,18 +46,19 @@ Shutdown test environment
     Shutdown appium server
 
 Shutdown appium server
-    [Documentation]                         Shutdown Appium server.
-    ${command}                              string.Replace String
-    ...                                     ${KILL_PROCESS_COMMAND}
+    #Change in the ${KILL_PROCESS_COMMAND} variable the word "pattern" to "appium"
+    ${command}                              string.Replace String                                           ${KILL_PROCESS_COMMAND}
     ...                                     search_for=pattern
     ...                                     replace_with=appium
+    # Starts the process passed in the command variable (${KILL_PROCESS_COMMAND})
     ${handle}                               process.Start Process
     ...                                     command=${command}
     ...                                     shell=true
+    # Waits the shutdown process is complete
     process.Wait For Process                handle=${handle}
 
 Start appium server
-    [Documentation]                         Start Appium server.
+    # Launches Appium on the informed path
     ${handle}                               process.Start Process
     ...                                     command=${CURDIR}/../node_modules/.bin/appium
     ...                                     shell=true
