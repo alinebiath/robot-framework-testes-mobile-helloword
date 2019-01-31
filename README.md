@@ -38,7 +38,7 @@ This command will perform pip installation of what is required by the Robot Fram
 ```sh
 $ adb devices
 ```
-- Enter the serial number returned in the <i>appium-capabilities.robot</i> file, replacing the variable <i>${DEVICE_NAME}</i>.
+- Enter the serial number returned in the <i>appium-capabilities.robot</i> file, replacing the variable <i>${UDID}</i>.
 - This file contains the Appium desired capabilities, which must be modified according to the configuration need.
 - See more Appium desired capabilities: http://appium.io/docs/en/writing-running-appium/caps/
 
