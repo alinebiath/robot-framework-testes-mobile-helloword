@@ -1,14 +1,14 @@
 *** Settings ***
 
 Documentation     "Hello Word" Tests Suite to validate the app screens.
-...               For the test cases it will be assumed that the requirements require,
-...               the initialization and finalization in the execution of each one.
 
 Resource          ${CURDIR}/../keywords/hello-world.robot
 
+# Mouting and unmounting the environment by initializing the Appium server to the test suite
 Suite Setup       Bootstrap test environment
 Suite Teardown    Shutdown test environment
 
+# Pre and post condition for all scenarios
 Test Setup        Launch application
 Test Teardown     Exit application
 
