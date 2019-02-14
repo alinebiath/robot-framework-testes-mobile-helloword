@@ -1,12 +1,14 @@
 *** Settings ***
 
-Resource                   ${CURDIR}/libraries.robot
-Resource                   ${CURDIR}/../variables/appium-capabilities.robot
+Resource                        ${CURDIR}/libraries.robot
+Resource                        ${CURDIR}/../variables/appium-capabilities.robot
 
 *** Variables ***
 
-#Variable stores a Unix command that kills a process
-${KILL_PROCESS_COMMAND}    ps aux | pgrep -f pattern | xargs kill $SIGTERM
+#Variables stores a command that kills a process
+${KILL_PROCESS_COMMAND_UNIX}    ps aux | pgrep -f pattern | xargs kill $SIGTERM
+${KILL_PROCESS_COMMAND_WIN}     taskkill.exe /F /IM process
+
 
 *** Keywords ***
 
@@ -25,7 +27,7 @@ Launch application
     ...                                     adbExecTimeout=86400
     ...                                     waitAction=${waitAction}
     ...                                     printPageSourceOnFindFailure=${printPageSourceOnFindFailure}
-    ...                                     deviceReadyTimeout=15
+    ...                                     deviceReadyTimeout=20
 
 Exit application
     appium.Quit Application
@@ -44,13 +46,28 @@ Bootstrap test environment
 Shutdown test environment
     [Documentation]                         Shutdown Appium server.
     Shutdown appium server
+    Shutdown android debug bridge
 
 Shutdown appium server
-    #Change in the ${KILL_PROCESS_COMMAND} variable the word "pattern" to "appium"
-    ${command}                              string.Replace String                                           ${KILL_PROCESS_COMMAND}
-    ...                                     search_for=pattern
-    ...                                     replace_with=appium
-    # Starts the process passed in the command variable (${KILL_PROCESS_COMMAND})
+    # #Change in the ${KILL_PROCESS_COMMAND_WIN} variable the word "process" to "node.exe"
+    ${command}                              string.Replace String
+    ...                                     ${KILL_PROCESS_COMMAND_WIN}
+    ...                                     search_for=process
+    ...                                     replace_with=node.exe
+
+
+    # Starts the process passed in the command variable (${KILL_PROCESS_COMMAND_WIN})
+    ${handle}                               process.Start Process
+    ...                                     command=${command}
+    ...                                     shell=true
+    # Waits the shutdown process is complete
+    process.Wait For Process                handle=${handle}
+
+Shutdown android debug bridge
+    ${command}                              string.Replace String
+    ...                                     ${KILL_PROCESS_COMMAND_WIN}
+    ...                                     search_for=process
+    ...                                     replace_with=adb.exe
     ${handle}                               process.Start Process
     ...                                     command=${command}
     ...                                     shell=true
