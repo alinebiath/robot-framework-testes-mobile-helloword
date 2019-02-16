@@ -8,7 +8,7 @@
 - Clone the project
 - Python 2.7.15 installed
 - NodeJS installed
-- SDK or Android Studio installed (see how to install: https://robotizandotestes.blogspot.com/2018/01/season-mobile-com-appium-ep01.html)
+- SDK or Android Studio installed (see how to install: https://robotizandotestes.blogspot.com/2018/01/season-mobile-com-appium-ep01.html for Windows / https://www.edivaldobrito.com.br/instalar-android-studio-no-ubuntu/ for Linux)
 - Plataforms Android 6.0, 7.0 and 7.1.1 installed (see how to install: https://robotizandotestes.blogspot.com/2018/01/season-mobile-com-appium-ep01.html)
 - An ASCII editor of your preference (i.e. VSCode, Atom, RIDE, etc)</br>
 
