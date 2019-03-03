@@ -9,6 +9,6 @@
   "author": "aline.biath",
   "license": "ISC",
   "dependencies": {
-    "appium": "^1.10.0"
+    "appium": "^1.11.1"
   }
 }

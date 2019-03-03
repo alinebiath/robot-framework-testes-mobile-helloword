@@ -6,7 +6,7 @@ Resource                        ${CURDIR}/../variables/appium-capabilities.robot
 *** Variables ***
 
 #Variables stores a command that kills a process
-${KILL_PROCESS_COMMAND_UNIX}    ps aux | pgrep -f pattern | xargs kill $SIGTERM
+${KILL_PROCESS_COMMAND_UNIX}    ps aux | pgrep -f process | xargs kill $SIGTERM
 ${KILL_PROCESS_COMMAND_WIN}     taskkill.exe /F /IM process
 
 
