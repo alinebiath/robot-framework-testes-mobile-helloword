@@ -46,7 +46,6 @@ Bootstrap test environment
 Shutdown test environment
     [Documentation]                         Shutdown Appium server.
     Shutdown appium server
-    Shutdown android debug bridge
 
 Shutdown appium server
     # #Change in the ${KILL_PROCESS_COMMAND_WIN} variable the word "process" to "node.exe"
@@ -54,20 +53,7 @@ Shutdown appium server
     ...                                     ${KILL_PROCESS_COMMAND_WIN}
     ...                                     search_for=process
     ...                                     replace_with=node.exe
-
-
     # Starts the process passed in the command variable (${KILL_PROCESS_COMMAND_WIN})
-    ${handle}                               process.Start Process
-    ...                                     command=${command}
-    ...                                     shell=true
-    # Waits the shutdown process is complete
-    process.Wait For Process                handle=${handle}
-
-Shutdown android debug bridge
-    ${command}                              string.Replace String
-    ...                                     ${KILL_PROCESS_COMMAND_WIN}
-    ...                                     search_for=process
-    ...                                     replace_with=adb.exe
     ${handle}                               process.Start Process
     ...                                     command=${command}
     ...                                     shell=true
