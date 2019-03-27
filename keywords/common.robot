@@ -37,7 +37,10 @@ Validate strings on screen
 
     [Arguments]                        @{texts_to_validate}
 
-    FOR                                ${index}                                                        ${text}    IN ENUMERATE    @{texts_to_validate}
+    FOR
+    ...                                ${index}
+    ...                                ${text}                                                         IN ENUMERATE
+    ...                                @{texts_to_validate}
     appium.Page Should Contain Text    ${text}
     END
 
@@ -77,5 +80,5 @@ Start appium server
     ...                                stderr=${CURDIR}/../output/appium-error.txt
     ...                                alias=appium
     ...                                output_encoding=UTF-8
-    
-    std.Sleep                          time_=3s
+
+    std.Sleep                          time_=30s
